@@ -1,0 +1,8 @@
+<div nz-space nzAlign="center" class="space-align-block" style="width: 100%;">
+  <nz-card nzTitle="{{product.nombre}}" style="width: 100%;">
+    <p>{{product.descripcion}}</p>
+    <nz-badge nzStatus="default" nzText="{{product.sku}}"></nz-badge> <br><br>
+    <i nz-icon nzType="dollar" nzTheme="outline"></i> {{product.quantity | currency}}
+    <label nz-checkbox style="float: right;" [(ngModel)]="isChecked" (change)="changeCheck(product)"><i nz-icon nzType="shopping-cart" nzTheme="outline"></i></label>
+  </nz-card>
+</div>

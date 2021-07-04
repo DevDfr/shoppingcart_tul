@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "apptul": {
+      "hosting": {
+        "tul": [
+          "apptul"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+<MenuComponent [loc]="'shop'"> </MenuComponent>
+<br>
+
+<div class="space-align-container">
+
+  <OrdenComponent
+    style="width: 19%;"
+    *ngFor="let ord of ordenes"
+    [orden]="ord"
+    >
+  </OrdenComponent>
+
+</div>
+

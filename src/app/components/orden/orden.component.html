@@ -1,0 +1,11 @@
+<div nz-space nzAlign="center" class="space-align-block" style="width: 100%;">
+  <nz-card nzTitle="{{orden.id}}" style="width: 100%;">
+    <p *ngFor="let prod of orden.products"> <strong>{{prod.nombre}}</strong> ({{prod.quantity | currency}}) </p>
+    <p><u>Total: {{orden.total | currency}}</u></p>
+    <nz-badge [nzStatus]="status" nzText="Estado:"></nz-badge> {{orden.status}}
+    <br><br>
+    <div *ngIf="orden.status == 'pending'">
+      <button [disabled]="bDisabled" nz-button nzType="primary" nzSize="small" (click)="pOrden()"> Procesar Orden </button>
+    </div>
+  </nz-card>
+</div>

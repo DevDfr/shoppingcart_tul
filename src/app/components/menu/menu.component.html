@@ -1,0 +1,12 @@
+<ul nz-menu nzMode="horizontal">
+    <li nz-menu-item [nzSelected]="loc == 'carload'">
+      <i nz-icon nzType="shopping-cart" nzTheme="outline"></i>
+      <a [routerLink]="['/carload']"> Llenar Carrito </a>
+
+    </li>
+    <li nz-menu-item [nzSelected]="loc == 'shop'">
+      <i nz-icon nzType="shopping" nzTheme="outline"></i>
+      <a [routerLink]="['/shop']">Ordenes</a>
+
+    </li>
+  </ul>

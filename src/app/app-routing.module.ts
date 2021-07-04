@@ -26,6 +26,10 @@ const routes: Routes = [
   {
     path:'shop',
     component: ShopComponent
+  },
+  {
+    path:'',
+    component: LoginComponent
   }
 ]
 

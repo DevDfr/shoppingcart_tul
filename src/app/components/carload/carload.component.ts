@@ -15,13 +15,16 @@ export class CarloadComponent implements OnInit {
   products: Product[] = []
   orden: Product[] = []
   total: number = 0;
+  auth: boolean = false
 
   constructor(private authServ: AuthService, private dataServ: DataService, private router: Router) {}
 
   async ngOnInit(): Promise<void> {
     const usr = await this.authServ.getCurrentUser();
 
-    if(!usr){
+    if(usr){
+      this.auth = true
+    } else{
       this.router.navigate(['/login'])
     }
 

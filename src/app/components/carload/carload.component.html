@@ -1,16 +1,22 @@
-<MenuComponent [loc]="'carload'"> </MenuComponent>
-<br>
-<TotalComponent [total]="total"></TotalComponent>
-<button nz-button nzType="primary" (click)="pOrden()"> Registrar Orden </button>
-<div class="space-align-container">
+<div *ngIf="auth">
 
-  <ProductComponent
-    style="width: 19%;"
-    *ngFor="let prod of products"
-    [product]="prod"
-    (checkProd)="checkProd($event)"
-    >
-  </ProductComponent>
+  <MenuComponent [loc]="'carload'"> </MenuComponent>
+  <br>
+  <TotalComponent [total]="total"></TotalComponent>
+  <button nz-button nzType="primary" (click)="pOrden()"> Registrar Orden </button>
+  <div class="space-align-container">
+
+    <ProductComponent
+      style="width: 19%;"
+      *ngFor="let prod of products"
+      [product]="prod"
+      (checkProd)="checkProd($event)"
+      >
+    </ProductComponent>
+
+  </div>
 
 </div>
+
+
 

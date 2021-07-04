@@ -1,14 +1,20 @@
-<MenuComponent [loc]="'shop'"> </MenuComponent>
-<br>
+<div *ngIf="auth">
 
-<div class="space-align-container">
+  <MenuComponent [loc]="'shop'"> </MenuComponent>
+  <br>
 
-  <OrdenComponent
-    style="width: 19%;"
-    *ngFor="let ord of ordenes"
-    [orden]="ord"
-    >
-  </OrdenComponent>
+  <div class="space-align-container">
+
+    <OrdenComponent
+      style="width: 19%;"
+      *ngFor="let ord of ordenes"
+      [orden]="ord"
+      >
+    </OrdenComponent>
+
+  </div>
 
 </div>
+
+
 

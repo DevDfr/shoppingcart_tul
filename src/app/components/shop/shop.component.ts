@@ -12,6 +12,7 @@ import { Router } from '@angular/router';
 export class ShopComponent implements OnInit {
 
   ordenes: any[] = []
+  auth: boolean = false
 
   constructor(private authServ: AuthService,private dataServ: DataService, private router: Router) {
 
@@ -20,7 +21,9 @@ export class ShopComponent implements OnInit {
   async ngOnInit(): Promise<void> {
     const usr = await this.authServ.getCurrentUser();
 
-    if(!usr){
+    if(usr){
+      this.auth = true
+    } else{
       this.router.navigate(['/login'])
     }
 
